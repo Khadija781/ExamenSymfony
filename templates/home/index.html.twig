@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class=" row ">
+        <div class="col mt-5 d-flex justify-content-center">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for oeuvre in oeuvres %}
+                            {% set active = oeuvre  == oeuvres | first ? 'active' : '' %}
+                            <div class="carousel-item {{ active }}">
+                                <img src="{{ 'img/oeuvre/' ~ oeuvre.image  }}" class="d-block w-100 rounded-lg" alt="Image oeuvre">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{ oeuvre.name }}</h5>
+                                    <p>{{ oeuvre.description | truncate(20, true)}}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselOeuvres" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselOeuvres" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+        </div>
+    </div>
+{% endblock %}

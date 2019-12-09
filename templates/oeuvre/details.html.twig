@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="text-white">
+    <h1 class="my-4">Titre : {{result.name}}
+        Catégorie : {{ result.category.name }}
+    </h1>
+    <div class="row">
+        <div class="col-md-8">
+            <img src="{{ 'img/oeuvre/' ~ result.image }}" alt="">
+        </div>
+
+        <div class="col-md-4">
+            <h3>Description</h3>
+            <p>{{ result.description }}</p>
+            <h3>Artiste</h3>
+            <div class="text-center">
+            <img src="{{result.artiste.photo}}" alt="">
+                {{ asset(result.artiste.photo) }}
+            <h4>{{ result.artiste.name }}</h4>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}
+

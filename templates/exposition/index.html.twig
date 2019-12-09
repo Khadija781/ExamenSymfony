@@ -1,0 +1,35 @@
+{% extends 'parent.html.twig' %}
+{% block content %}
+
+    <div class="col">
+        <br>
+        <h3>Les Expositions à venir et passés</h3><br>
+        <br>
+
+        <div class="col-6 text-center">
+            <h4 class="my-4">Expositions à venir</h4>
+            <table class="table table-hover table-blue shadow-lg text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+            </table>
+        </div><br>
+        <div class="col-6 text-center">
+            <h4 class="my-4">Expositions passées</h4>
+            <table class="table table-hover table-blue shadow-lg text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                </tr>
+                </thead>
+             </table>
+        </div>
+    </div>
+
+{% endblock %}

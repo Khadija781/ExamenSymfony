@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-white"><strong>Résultat contact</strong></h1>
+    <div class="col text-white my-5">
+        <h5 class="h5"><b>Prénom : </b>{{ firstname }}</h5>
+        <h5 class="h5"><b>Nom : </b>{{ lastname }}</h5>
+        <h5 class="h5"><b>Message : </b>{{ message }}</h5>
+        <h5 class="h5"><b>Email : </b>{{ email }}</h5>
+    </div>
+    <a href="{{ url('home.index') }}" class="btn btn-primary">Retour à l'accueil</a>
+{% endblock %}
